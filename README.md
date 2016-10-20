@@ -2,6 +2,9 @@
 
 There are times where your website or mobile app would like to show live data, such as scores. This repo consists of an API and a few demo projects that make that happen. Using .NET Web API and Signal R.
 
+Working Demo [http://livescoringwebapp.azurewebsites.net/](http://livescoringwebapp.azurewebsites.net/)
+
+
 ## Installation ##
 
 1. Clone repo
