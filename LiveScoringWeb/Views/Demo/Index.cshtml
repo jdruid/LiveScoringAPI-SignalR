@@ -1,0 +1,27 @@
+﻿<div class="jumbotron">
+    <h1>ASP.NET WEB API with SignalR</h1>
+    <p class="lead">This is a demo of a ASP.NET Web API app that uses SignalR to push real-time messages to its clients. </p>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <h2>Web API</h2>
+        <p>
+            The Web API has 2 endpoints.
+            <ul>
+                <li>RandomizeScores : Radomly increases the current score in the player score object and broadcast the score (for testing only)</li>
+                <li>RecordScore: Which takes a param of the player object to record and broadcast the score</li>                
+            </ul>
+        </p>
+        <p><a class="btn btn-default" href="http://livescoringapi.azurewebsites.net/swagger">View Swagger</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Record Score Form</h2>
+        <p>Form page that user can input a score and will post to Web API for realtime publishing</p>
+        <p><a class="btn btn-default" href="/demo/record">View</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>View Score Page</h2>
+        <p>Sample HTML page that updates realtime when a score is published</p>
+        <p><a class="btn btn-default" href="/demo/scores">View</a></p>
+    </div>
+</div>

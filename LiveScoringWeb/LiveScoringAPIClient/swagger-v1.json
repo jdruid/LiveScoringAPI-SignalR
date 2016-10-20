@@ -1,0 +1,59 @@
+﻿{
+  "swagger": "2.0",
+  "info": {
+    "version": "v1",
+    "title": "LiveScoringAPI"
+  },
+  "host": "localhost:15710",
+  "schemes": [ "http" ],
+  "paths": {
+    "/api/PlayerScore": {
+      "get": {
+        "tags": [ "PlayerScore" ],
+        "operationId": "RandomizeScores",
+        "consumes": [],
+        "produces": [ "application/json", "text/json", "application/xml", "text/xml" ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "type": "object" }
+          },
+          "201": { "description": "Created" }
+        },
+        "deprecated": false
+      },
+      "post": {
+        "tags": [ "PlayerScore" ],
+        "operationId": "RecordScore",
+        "consumes": [ "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded" ],
+        "produces": [ "application/json", "text/json", "application/xml", "text/xml" ],
+        "parameters": [
+          {
+            "name": "player",
+            "in": "body",
+            "required": true,
+            "schema": { "$ref": "#/definitions/Player" }
+          }
+        ],
+        "responses": { "200": { "description": "OK" } },
+        "deprecated": false
+      }
+    }
+  },
+  "definitions": {
+    "Player": {
+      "required": [ "Name", "Score", "Match" ],
+      "type": "object",
+      "properties": {
+        "Name": { "type": "string" },
+        "Score": {
+          "format": "int32",
+          "maximum": 999,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "Match": { "type": "string" }
+      }
+    }
+  }
+}

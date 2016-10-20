@@ -1,0 +1,22 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Scripts
+{
+    <script src="@Url.Content("~/Scripts/jquery.signalR-2.2.1.min.js")"></script>
+    <script src="http://livescoringapi.azurewebsites.net/signalr/hubs"></script>
+    <script src="@Url.Content("~/Scripts/PlayerScoreTicker.js")"></script>
+
+}
+
+<h2>Live Score Table</h2>
+<div id="scoreTable">
+    <table border="1">
+        <thead>
+            <tr><th>Name</th><th>Score</th><th>Match</th></tr>
+        </thead>
+        <tbody>
+            <tr class="loading"><td colspan="5">loading...</td></tr>
+        </tbody>
+    </table>
+</div>
